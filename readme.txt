@@ -1,5 +1,4 @@
-Template Name: I fund Cities
-
+Template Name: fea-skill test project
 For development we used scss compiler. to compile scss file please run one of these command
 
 To run once:  sass assets/src/scss/style.scss assets/css/style.css
@@ -25,7 +24,7 @@ Ifc
       __Slick.js
       __Main.js(customjs)
 
-   ___IMG
+   ___IMAGES
 
       __all images will be here
 
