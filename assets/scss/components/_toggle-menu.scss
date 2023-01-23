@@ -1,0 +1,67 @@
+.outside-menu-toggler {
+    display: none;
+    .menu-toggler {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    float: right;
+    font-size: 32px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    
+    span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: $color_secondary;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: transform 0.35s ease;
+        &:nth-child(1) {
+            top: 0px;
+        }
+        &:nth-child(2), 
+        &:nth-child(3) {
+            top: 8px;
+        }
+        &:nth-child(4) {
+            top: 16px;
+        }
+
+    }
+    .menu.open {
+        span {
+            &:nth-child(1),
+            &:nth-child(4) {
+                opacity: 0;
+            }
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    }
+    @include media(mb){
+        display: block;
+    }
+}
+
+
+.body-scrolled {
+    #{$prefix}-menu-toggler {
+        a {
+            span {
+                background: $color_primary;
+            }
+        }
+    }
+}
+

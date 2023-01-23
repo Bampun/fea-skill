@@ -1,0 +1,168 @@
+#{$prefix}-footer-site-title {
+    font-size: 27px;
+    line-height: 1.2;
+    font-weight: 700;
+    > a {
+        color: $color_white;
+    }
+}
+#{$prefix}-footer-site-description {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: $color_white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background:  $color_white;
+        left: 0;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background:  $color_white;
+        right: 0; 
+    }
+}
+
+
+#{$prefix}-site-footer {
+    position: relative;
+    background: $color_secondary;
+    #{$prefix}-main-footer {
+        padding: 60px 0 ;
+        #{$prefix}-footer-site-branding {
+            display: inline-block;
+        }
+        #{$prefix}-line-space {
+            margin: 30px auto 15px;
+            width: 100%;
+        }
+         #{$prefix}-footer-menu {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; 
+            .is-desktop {
+                @include media (mb){
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#{$prefix}-footer-social-menu {
+    display: flex;
+    justify-content: end;
+    ul {
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        align-items: center;
+        a {
+            color: $color_white;
+            i.fa-brands {
+                font-family: "Font Awesome 5 Brands";
+                font-style: normal;
+            }
+       }
+       span {
+        display: none;
+       }
+    }
+}
+
+ #{$prefix}-footer-nav {
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        list-style: none;
+        @include media (mb){
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        li {
+            @include media (mb){
+                flex: 0 0 45%;
+                max-width: 45%;
+            }
+        }
+        a {
+            color: $color_white;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+}
+
+#{$prefix}-site-footer-inner {
+    @include media(mb){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .is-mobile {
+        display: none;
+        @include media (mb){
+            display: block;
+        }
+    }
+}
+
+ #{$prefix}-footer-copyright {
+    padding: 50px 0 20px;
+    position: relative;
+    #{$prefix}-footer-copyright-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        a {
+            font-size: 14px;
+            opacity: 0.5;
+            font-weight: 400;
+        }
+        .copy-right-text {
+            color: $color_white;
+            font-family: 'Helvetica';
+            font-size: 14px;
+            opacity: 0.5;
+            font-weight: 400;
+        }
+    }
+    
+}
+
+#{$prefix}-footer-nav-copy-right {
+    @include media(mb) {
+        margin-bottom: 40px;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        list-style: none;
+        @include media (mb){
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        a {
+            color: $color_white;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+}

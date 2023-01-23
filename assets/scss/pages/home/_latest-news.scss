@@ -1,0 +1,144 @@
+#{$prefix}-latest-news-wrapper {
+  position: relative;
+  padding: 60px 0;
+  #{$prefix}-latest-news-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    #{$prefix}-latest-news {
+      flex: 0 0 50%;
+      max-width: 50%;
+      #{$prefix}-features-post {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+.post-btn {
+  margin-top: 30px;
+
+  a {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.002em;
+    color: $color_secondary;
+    border-bottom: 1px solid;
+    border-color: #c4c4c4;
+    padding-bottom: 10px;
+    i {
+      margin-left: 6px;
+    }
+  }
+}
+
+#{$prefix}-latest-news-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: $color_primary;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+#{$prefix}-post {
+  border: 1px solid;
+  padding: 25px;
+  .post-title {
+    font-weight: 400;
+    line-height: 1.2;
+    a {
+      color: $color_secondary;
+    }
+  }
+}
+
+.post-left {
+  #{$prefix}-post {
+    border-color: #fff;
+    border-right-color: transparent;
+  }
+  .post-title {
+    font-size: 38px;
+  }
+}
+.post-right {
+  #{$prefix}-post {
+    border-color: #fff;
+  }
+  #{$prefix}-features-post {
+    #{$prefix}-post {
+      border-top-color: transparent;
+      &:nth-child(2) {
+        border-left-color: transparent;
+      }
+      .post-title {
+        font-size: 18px;
+      }
+    }
+  }
+  .post-title {
+    font-size: 32px;
+  }
+}
+
+.entry-meta {
+  margin: 10px 0;
+  .entry-date {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color_dark_grey;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    span {
+      display: flex;
+      align-items: center;
+      margin-left: 25px;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 30px;
+        background: $color_dark_grey;
+        left: 103px;
+      }
+    }
+  }
+}
+hr {
+  border: none;
+}
+.is-desktop-view {
+  @include media(md) {
+    display: none !important;
+  }
+}
+.is-mibile-view {
+  display: none;
+  @include media(md) {
+    display: block;
+  }
+  .outside-latest-news-title {
+    margin-bottom: 20px;
+  }
+  .outside-latest-news-innner {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    .outside-post {
+      border-color: #fff;
+      width: 250px;
+      &:not(:first-child) {
+        border-left: 1px solid transparent !important;
+      }
+    }
+    .post-title {
+      font-size: 20px;
+    }
+  }
+  img {
+    height: 130px;
+    object-fit: cover;
+  }
+}

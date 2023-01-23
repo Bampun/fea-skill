@@ -1,0 +1,61 @@
+#{$prefix}-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  flex: 0 0 40%;
+  max-width: 40%;
+  @include media(mb) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+}
+
+#{$prefix}-btn {
+  color: #3c3c3c;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.33;
+  font-weight: bold;
+  border-radius: 2px;
+
+  &#{$prefix}-btn-primary {
+    background: $color_primary;
+
+    &:hover {
+      background: $color_primary;
+    }
+  }
+  &#{$prefix}-btn-secondary {
+    background: $color_secondary;
+    &:hover {
+      background: $color_primary;
+    }
+  }
+
+  &#{$prefix}-btn-transparent {
+    background: transparent;
+    border: 1px solid $color_secondary;
+    &:hover {
+      background: $color_primary;
+    }
+  }
+
+  &:hover {
+    color: #fff;
+  }
+  span {
+    padding: 12px 15px;
+    border-right: 1px solid;
+  }
+  i {
+    padding: 12px;
+  }
+}

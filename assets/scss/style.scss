@@ -1,0 +1,26 @@
+@import 'normalize';
+@import 'helpers/master';
+@import 'components/master';
+@import 'layouts/master';
+@import 'pages/master';
+
+// sass assets/src/scss/style.scss assets/css/style.css
+//sass --watch assets/scss/style.scss:assets/css/style.css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#{$prefix}-container {
+  max-width: 1360px;
+  padding: 0 15px;
+  margin: auto;
+  @include media(sm) {
+    max-width: 1140px;
+    padding: 0 60px;
+  }
+  @include media(mb) {
+    max-width: 100%;
+    padding: 0 15px 0 30px;
+  }
+}

@@ -1,0 +1,32 @@
+#{$prefix}-top-bar {
+    padding: 18px 0;
+    background: $color_bg;
+    width: 100%;
+    position: relative;
+    #{$prefix}-social-menu {
+        display: flex;
+        justify-content: end;
+        ul {
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            align-items: center;
+            a {
+                color: #74788A;
+                &:hover {
+                    color: $color_primary;
+                }
+                i.fa-brands {
+                    font-family: "Font Awesome 5 Brands";
+                    font-style: normal;
+                }
+           }
+           span {
+            display: none;
+           }
+        }
+    }
+}
+

@@ -1,0 +1,60 @@
+#{$prefix}-primary-menu {
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    li {
+      position: relative;
+      ul {
+        position: absolute;
+      }
+    }
+    a {
+      color: $color_secondary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      &:hover {
+        color: $color_primary;
+      }
+    }
+  }
+  @include media(mb) {
+    display: none;
+  }
+}
+// .mobile-menu {
+//     display: none;
+// }
+.main-menu-open {
+  .outside-menu-wrapper {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #003a92;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    visibility: visible;
+    opacity: 1;
+    #{$prefix}-primary-menu {
+      display: block;
+      ul {
+        display: block;
+        li {
+          a {
+            padding: 10px 35px 10px 15px;
+            display: block;
+            font-weight: 300;
+            font-size: 1.03rem;
+            text-transform: capitalize;
+            color: #fff;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+}

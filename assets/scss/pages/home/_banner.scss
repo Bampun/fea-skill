@@ -1,0 +1,44 @@
+#{$prefix}-banner-wrapper {
+  position: relative;
+  z-index: 99;
+  padding-top: 15px;
+  #{$prefix}-banner-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    @include media(mb) {
+      display: block;
+    }
+    #{$prefix}-banner-content {
+      flex: 0 0 60%;
+      max-width: 60%;
+      @include media(mb) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+  h2 {
+    font-family: 'Galaxie Copernicus';
+    font-weight: 400;
+    font-size: 60px;
+    color: $color_primary;
+    @include media(mb) {
+      font-size: 32px;
+    }
+  }
+  #{$prefix}-banner-image {
+    padding-left: 6%;
+    width: 100%;
+    margin-top: 50px;
+    img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+      padding-left: 10px;
+      @include media(mb) {
+        height: 200px;
+      }
+    }
+  }
+}

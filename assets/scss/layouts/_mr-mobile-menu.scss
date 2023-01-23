@@ -1,0 +1,115 @@
+.mr-mobile-menu-wrapper {
+  display: none;
+}
+.main-menu-open {
+  .mr-mobile-menu-wrapper {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #003a92;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    visibility: visible;
+    opacity: 1;
+    padding: 30px;
+    .mr-mobile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      .mr-mobile-menu-site-title {
+        font-size: 27px;
+        line-height: 1.2;
+        font-weight: 700;
+        > a {
+          color: $color_white;
+        }
+      }
+      .mr-mobile-menu-site-description {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        color: $color_white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 2px;
+          color: $color_white;
+          left: 0;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          width: 20px;
+          height: 2px;
+          color: $color_white;
+          right: 0;
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      li {
+        border: 1px solid;
+        border-top-color: #c4c4c4;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        a {
+          padding: 15px 35px 15px 0px;
+          display: block;
+          color: #fff;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          text-transform: capitalize;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+.mr-close-wrapper {
+  .mr-inner-box {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    background: transparent;
+    border: none;
+    .mr-inner {
+      display: inline-block;
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        transform: translate(-50%, -50%) rotate(130deg);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+}

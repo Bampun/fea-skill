@@ -1,0 +1,64 @@
+#{$prefix}-our-mission-overlay {
+  position: absolute;
+  background: #8c2531;
+  top: 0;
+  bottom: 40%;
+  width: 94%;
+  z-index: 0;
+  @include media(mb) {
+    bottom: 30%;
+    width: 98%;
+  }
+}
+#{$prefix}-our-mission-wrapper {
+  position: relative;
+  padding: 60px 0;
+  #{$prefix}-our-mission-inner {
+    max-width: 50%;
+    z-index: 99;
+    position: relative;
+    margin-bottom: 50px;
+    @include media(mb) {
+      max-width: 100%;
+    }
+    h5 {
+      font-size: 20px;
+      font-weight: 700;
+      color: $color_white;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      @include media(mb) {
+        font-size: 16px;
+      }
+    }
+    h2 {
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      color: $color_white;
+      @include media(mb) {
+        font-size: 24px;
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: $color_white;
+    }
+  }
+  #{$prefix}-our-mission-image {
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    img {
+      width: 92%;
+      object-fit: fill;
+      height: 500px;
+      @include media(mb) {
+        height: 200px;
+        width: 95%;
+      }
+    }
+  }
+}
