@@ -4,10 +4,9 @@
     align-items: center;
     gap: 40px;
     list-style: none;
-    li {
-      position: relative;
-      ul {
-        position: absolute;
+    .menu-active {
+      > a {
+        color: $color_primary;
       }
     }
     a {
@@ -15,53 +14,93 @@
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
+      position: relative;
       &:hover {
         color: $color_primary;
       }
     }
+    
   }
   @include media(mb) {
     display: none;
   }
 }
-.main-menu-open {
-  .outside-menu-wrapper {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: #003a92;
-    transition: all 0.5s;
-    top: 0;
-    left: 0;
-    z-index: 99999;
+// .main-menu-open {
+//   .outside-menu-wrapper {
+//     position: fixed;
+//     height: 100%;
+//     width: 100%;
+//     background: #003a92;
+//     transition: all 0.5s;
+//     top: 0;
+//     left: 0;
+//     z-index: 99;
+//     visibility: visible;
+//     opacity: 1;
+//     #{$prefix}-primary-menu {
+//       display: block;
+//       ul {
+//         display: block;
+//         li {
+//           a {
+//             padding: 10px 35px 10px 15px;
+//             display: block;
+//             font-weight: 300;
+//             font-size: 1.03rem;
+//             text-transform: capitalize;
+//             color: #fff;
+//             position: relative;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.menu-active {
+  .dropdown-menu {
     visibility: visible;
     opacity: 1;
-    #{$prefix}-primary-menu {
-      display: block;
-      ul {
-        display: block;
-        li {
-          a {
-            padding: 10px 35px 10px 15px;
-            display: block;
-            font-weight: 300;
-            font-size: 1.03rem;
-            text-transform: capitalize;
-            color: #fff;
-            position: relative;
-          }
-        }
-      }
-    }
   }
 }
 
-ul.sub-menu {
-  li {
-    border: none !important;
-    a {
-      padding: 10px 35px 20px 15px !important;
-      font-size: 0.95rem !important;
+.dropdown-menu {
+  position: fixed;
+  background-color: $color_white;
+  width: 100vw;
+  height: 300px;
+  z-index: 990;
+  left: 50%;
+  margin-left: -50vw;
+  border-top: 2px solid;
+  margin-top: 35px;
+  visibility: hidden;
+  opacity: 0;
+  .dropdown-menu-inner {
+    max-width: 1360px;
+    margin: auto;
+    height: 100%;
+    padding: 0 15px;
+    position: relative;
+    .sub-menu {
+      display: block;
+      height: 100%;
+      position: absolute;
+      left: 73%;
+      top: 50%;
+      transform: translate(0%, -22%);
+        h3 {
+          font-size: 25px;
+          font-family: "Galaxie Copernicus";
+          font-weight: 300;
+          color: $color_primary;
+        }
+        .space-line {
+          width: 40%;
+          height: 1px;
+          background: #C4C4C4;
+          margin: 30px 0;
+      }
     }
   }
 }

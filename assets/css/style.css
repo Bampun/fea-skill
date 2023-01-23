@@ -246,7 +246,7 @@ h3 {
   position: absolute;
   right: 0;
   width: 96%;
-  height: 645px;
+  height: 500px;
   background: #fff;
   z-index: 1;
 }
@@ -261,7 +261,7 @@ h3 {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 990;
   background-color: #fff;
   transition: all 0.3s;
 }
@@ -275,7 +275,7 @@ h3 {
   flex-wrap: wrap;
   align-items: center;
   padding: 20px 0px;
-  z-index: 999;
+  z-index: 990;
   position: relative;
 }
 
@@ -501,7 +501,7 @@ h3 {
   transition: all 0.5s;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 999;
   visibility: visible;
   opacity: 1;
   padding: 30px;
@@ -531,21 +531,23 @@ h3 {
   justify-content: center;
   position: relative;
 }
-.main-menu-open .mr-mobile-menu-wrapper .mr-mobile-header .mr-mobile-menu-site-description::before {
+.main-menu-open .mr-mobile-menu-wrapper .mr-mobile-header .mr-mobile-menu-site-description:before {
   content: "";
   position: absolute;
   width: 20px;
   height: 2px;
   color: #fff;
   left: 0;
+  z-index: 999;
 }
-.main-menu-open .mr-mobile-menu-wrapper .mr-mobile-header .mr-mobile-menu-site-description::after {
+.main-menu-open .mr-mobile-menu-wrapper .mr-mobile-header .mr-mobile-menu-site-description:after {
   content: "";
   position: absolute;
   width: 20px;
   height: 2px;
   color: #fff;
   right: 0;
+  z-index: 999;
 }
 .main-menu-open .mr-mobile-menu-wrapper ul {
   list-style: none;
@@ -566,6 +568,19 @@ h3 {
   font-size: 16px;
   text-transform: capitalize;
   position: relative;
+}
+.main-menu-open .mr-mobile-menu-wrapper ul li .mr-sub-menu {
+  display: none;
+  margin: 0px 20px 10px;
+}
+.main-menu-open .mr-mobile-menu-wrapper ul li .mr-sub-menu li {
+  border: none;
+}
+.main-menu-open .mr-mobile-menu-wrapper ul .active > a {
+  opacity: 0.4;
+}
+.main-menu-open .mr-mobile-menu-wrapper ul .active .mr-sub-menu {
+  display: block;
 }
 
 .mr-close-wrapper .mr-inner-box {
@@ -607,17 +622,15 @@ h3 {
   gap: 40px;
   list-style: none;
 }
-.outside-primary-menu ul li {
-  position: relative;
-}
-.outside-primary-menu ul li ul {
-  position: absolute;
+.outside-primary-menu ul .menu-active > a {
+  color: #003A92;
 }
 .outside-primary-menu ul a {
   color: #3C3C3C;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+  position: relative;
 }
 .outside-primary-menu ul a:hover {
   color: #003A92;
@@ -628,91 +641,112 @@ h3 {
   }
 }
 
-.main-menu-open .outside-menu-wrapper {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background: #003a92;
-  transition: all 0.5s;
-  top: 0;
-  left: 0;
-  z-index: 99999;
+.menu-active .dropdown-menu {
   visibility: visible;
   opacity: 1;
 }
-.main-menu-open .outside-menu-wrapper .outside-primary-menu {
-  display: block;
+
+.dropdown-menu {
+  position: fixed;
+  background-color: #fff;
+  width: 100vw;
+  height: 300px;
+  z-index: 990;
+  left: 50%;
+  margin-left: -50vw;
+  border-top: 2px solid;
+  margin-top: 35px;
+  visibility: hidden;
+  opacity: 0;
 }
-.main-menu-open .outside-menu-wrapper .outside-primary-menu ul {
-  display: block;
-}
-.main-menu-open .outside-menu-wrapper .outside-primary-menu ul li a {
-  padding: 10px 35px 10px 15px;
-  display: block;
-  font-weight: 300;
-  font-size: 1.03rem;
-  text-transform: capitalize;
-  color: #fff;
+.dropdown-menu .dropdown-menu-inner {
+  max-width: 1360px;
+  margin: auto;
+  height: 100%;
+  padding: 0 15px;
   position: relative;
 }
-
-ul.sub-menu li {
-  border: none !important;
+.dropdown-menu .dropdown-menu-inner .sub-menu {
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 73%;
+  top: 50%;
+  transform: translate(0%, -22%);
 }
-ul.sub-menu li a {
-  padding: 10px 35px 20px 15px !important;
-  font-size: 0.95rem !important;
+.dropdown-menu .dropdown-menu-inner .sub-menu h3 {
+  font-size: 25px;
+  font-family: "Galaxie Copernicus";
+  font-weight: 300;
+  color: #003A92;
+}
+.dropdown-menu .dropdown-menu-inner .sub-menu .space-line {
+  width: 40%;
+  height: 1px;
+  background: #C4C4C4;
+  margin: 30px 0;
 }
 
 .outside-banner-wrapper {
-  position: relative;
-  z-index: 99;
-  padding-top: 15px;
+  padding-top: 25px;
 }
-.outside-banner-wrapper .outside-banner-inner {
+.outside-banner-wrapper .outside-banner-main {
+  z-index: 99;
+  position: relative;
+  min-height: 700px;
+}
+@media (max-width: 1199px) {
+  .outside-banner-wrapper .outside-banner-main {
+    min-height: 420px;
+  }
+}
+.outside-banner-wrapper .outside-banner-main .outside-banner-inner {
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
 @media (max-width: 768px) {
-  .outside-banner-wrapper .outside-banner-inner {
+  .outside-banner-wrapper .outside-banner-main .outside-banner-inner {
     display: block;
   }
 }
-.outside-banner-wrapper .outside-banner-inner .outside-banner-content {
+.outside-banner-wrapper .outside-banner-main .outside-banner-inner .outside-banner-content {
   flex: 0 0 60%;
   max-width: 60%;
 }
 @media (max-width: 768px) {
-  .outside-banner-wrapper .outside-banner-inner .outside-banner-content {
+  .outside-banner-wrapper .outside-banner-main .outside-banner-inner .outside-banner-content {
     flex: 0 0 100%;
     max-width: 100%;
   }
 }
-.outside-banner-wrapper h2 {
+.outside-banner-wrapper .outside-banner-main h2 {
   font-family: "Galaxie Copernicus";
   font-weight: 400;
   font-size: 60px;
   color: #003A92;
 }
 @media (max-width: 768px) {
-  .outside-banner-wrapper h2 {
+  .outside-banner-wrapper .outside-banner-main h2 {
     font-size: 32px;
   }
 }
-.outside-banner-wrapper .outside-banner-image {
-  padding-left: 6%;
+.outside-banner-wrapper .outside-banner-main .outside-banner-image {
   width: 100%;
+  position: absolute;
+  right: 0;
+  max-width: 94%;
+  height: 450px;
   margin-top: 50px;
 }
-.outside-banner-wrapper .outside-banner-image img {
+.outside-banner-wrapper .outside-banner-main .outside-banner-image img {
   width: 100%;
-  height: 540px;
-  object-fit: cover;
-  padding-left: 10px;
+  height: 100%;
+  object-fit: fill;
+  padding-left: 3px;
 }
 @media (max-width: 768px) {
-  .outside-banner-wrapper .outside-banner-image img {
+  .outside-banner-wrapper .outside-banner-main .outside-banner-image img {
     height: 200px;
   }
 }

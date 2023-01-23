@@ -45,9 +45,20 @@
       $('body').toggleClass('main-menu-open');
     });
 
+    $('#primary-menu .menu-item').click(function () {
+      $('.menu-item.menu-active').removeClass('menu-active');
+      $(this).addClass('menu-active');
+    });
+
+    $('#mr-mobile-menu-primary-menu li').click(function () {
+      $('li.active').removeClass('active');
+      $(this).addClass('active');
+    });
+
     $('#mr-close').click(function () {
       $('body').removeClass('main-menu-open');
     });
+
   }
 
   $(window).on('scroll', function () {

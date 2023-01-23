@@ -11,7 +11,7 @@
     transition: all 0.5s;
     top: 0;
     left: 0;
-    z-index: 99999;
+    z-index: 999;
     visibility: visible;
     opacity: 1;
     padding: 30px;
@@ -38,21 +38,23 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        &::before {
+        &:before {
           content: '';
           position: absolute;
           width: 20px;
           height: 2px;
           color: $color_white;
           left: 0;
+          z-index: 999;
         }
-        &::after {
+        &:after {
           content: '';
           position: absolute;
           width: 20px;
           height: 2px;
           color: $color_white;
           right: 0;
+          z-index: 999;
         }
       }
     }
@@ -73,6 +75,22 @@
           font-size: 16px;
           text-transform: capitalize;
           position: relative;
+        }
+        
+        .mr-sub-menu {
+          display: none;
+          margin: 0px 20px 10px;
+          li {
+            border: none;
+          }
+        }
+      }
+      .active {
+        > a{
+          opacity: 0.4;
+        }
+        .mr-sub-menu {
+          display: block;
         }
       }
     }
@@ -113,3 +131,5 @@
     }
   }
 }
+
+

@@ -2,7 +2,7 @@
   position: absolute;
   right: 0;
   width: 96%;
-  height: 645px;
+  height: 500px;
   background: #fff;
   z-index: 1;
   @include media(mb) {
@@ -15,7 +15,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 990;
     background-color: #fff;
     transition: all 0.3s;
   }
@@ -29,7 +29,7 @@
     flex-wrap: wrap;
     align-items: center;
     padding: 20px 0px;
-    z-index: 999;
+    z-index: 990;
     position: relative;
   }
 }
