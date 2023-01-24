@@ -1,11 +1,14 @@
 #{$prefix}-banner-wrapper {
   padding-top: 25px;
   #{$prefix}-banner-main {
-    z-index: 99;
+    z-index: 50;
     position: relative;
     min-height: 700px;
-    @include media(md) {
-      min-height: 420px;
+    @include media(sm) {
+      min-height: 500px;
+    }
+    @include media(mb) {
+      min-height: 400px;
     }
     #{$prefix}-banner-inner {
       display: flex;
@@ -28,6 +31,9 @@
       font-weight: 400;
       font-size: 60px;
       color: $color_primary;
+      @include media(sm) {
+        font-size: 38px;
+      }
       @include media(mb) {
         font-size: 32px;
       }
@@ -39,6 +45,21 @@
       max-width: 94%;
       height: 450px;
       margin-top: 50px;
+      @media (min-width: 1500px) {
+        max-width: 89%;
+      }
+      @media (min-width: 1800px) {
+        max-width: 85%;
+      }
+      @include media(sm) {
+        max-width: 97%;
+        height: 380px;
+      }
+      @include media(mb) {
+        max-width: 93%;
+        height: 400px;
+      }
+
       img {
         width: 100%;
         height: 100%;

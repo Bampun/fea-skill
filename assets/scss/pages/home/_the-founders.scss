@@ -45,12 +45,12 @@
       bottom: 10%;
       left: 4%;
       width: 100%;
-      h3,
-      h4 {
+      h3 {
         font-size: 38px;
         font-weight: 400;
         line-height: 1.2;
         color: $color_white;
+        font-family: 'Galaxie Copernicus';
       }
     }
   }
@@ -63,4 +63,47 @@
   background: #fff;
   opacity: 0.2;
   margin: 10px 0;
+}
+
+.founders-is-desktop {
+  @include media(mb) {
+    display: none;
+  }
+}
+.founders-is-mobile {
+  display: none;
+  @include media(mb) {
+    display: block;
+  }
+  #{$prefix}-the-founders-image {
+    &:nth-child(1) {
+      margin-bottom: 15px;
+    }
+  }
+  #{$prefix}-line-space {
+    display: none;
+  }
+  h3 {
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    i {
+      font-size: 13px;
+      margin-left: 6px;
+    }
+  }
+}
+
+.founders-one {
+  .author-two {
+    display: none;
+  }
+}
+.founders-two {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.36) 100%), url('/assets/images/founders-two.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  .author-one {
+    display: none;
+  }
 }

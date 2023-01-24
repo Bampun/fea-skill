@@ -1,82 +1,75 @@
-$color_primary: #003A92;
-$color_secondary: #3C3C3C;
-$color_bg: #F2EFEE;
+$color_primary: #003a92;
+$color_secondary: #3c3c3c;
+$color_bg: #f2efee;
 $color_green: #24912d;
 $color_white: #fff;
-$color_dark_grey: #74788A;
+$color_dark_grey: #74788a;
 $color_black: #000;
 $color_light_grey: #f5f5f5;
 $color_light_blue: #f2f8fa;
 $text-color: #252020;
 $box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.06);
 
-$prefix: ".outside";
+$prefix: '.outside';
 $font_secondary: 'Poppins';
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .d-flex {
-	display: -webkit-box;      
-  	display: -moz-box;        
-  	display: -ms-flexbox;     
-  	display: -webkit-flex;   
-  	display: flex;
-  	flex-wrap: wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .col-3 {
-	max-width: 33.33%;
-	flex: 0 0 33.33%;
-	padding: 15px;
+  max-width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 15px;
 
-	@include media(mb) {
-		max-width: 100%;
-		flex: 0 0 100%;
-	}
+  @include media(mb) {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
 }
 
 .col-4 {
-	max-width: 25%;
-	flex: 0 0 25%;
-	padding: 15px;
+  max-width: 25%;
+  flex: 0 0 25%;
+  padding: 15px;
 
-	@include media(mb) {
-		max-width: 100%;
-		flex: 0 0 100%;
-	}
+  @include media(mb) {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
 }
 
-
 #{$prefix}-title-wrapper {
-	h2 {
-	    font-size: 38px;
-	    color: #333333;
-	    margin: 0 0 10px;
-	    text-transform: uppercase;
-	}
+  h2 {
+    font-size: 38px;
+    color: #333333;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+  }
 
-	p {
-		font-size: 15px;
-		line-height: 1.6;
-		color: #000;
-	}
-} 
-
-
-#{$prefix}-container-small {
-	max-width: 1050px;
-    margin: auto;
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #000;
+  }
 }
 
 .has-overlay:after {
-    content: "";
-    background: #000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .2;
+  content: '';
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
 }

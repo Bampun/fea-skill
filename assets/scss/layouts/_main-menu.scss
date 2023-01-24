@@ -1,3 +1,15 @@
+.body-scrolled {
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background: #74788a;
+    opacity: 0.8;
+  }
+}
 #{$prefix}-primary-menu {
   ul {
     display: flex;
@@ -19,48 +31,23 @@
         color: $color_primary;
       }
     }
-    
   }
   @include media(mb) {
     display: none;
   }
 }
-// .main-menu-open {
-//   .outside-menu-wrapper {
-//     position: fixed;
-//     height: 100%;
-//     width: 100%;
-//     background: #003a92;
-//     transition: all 0.5s;
-//     top: 0;
-//     left: 0;
-//     z-index: 99;
-//     visibility: visible;
-//     opacity: 1;
-//     #{$prefix}-primary-menu {
-//       display: block;
-//       ul {
-//         display: block;
-//         li {
-//           a {
-//             padding: 10px 35px 10px 15px;
-//             display: block;
-//             font-weight: 300;
-//             font-size: 1.03rem;
-//             text-transform: capitalize;
-//             color: #fff;
-//             position: relative;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 
 .menu-active {
   .dropdown-menu {
     visibility: visible;
     opacity: 1;
+  }
+}
+.body-scrolled {
+  .menu-active {
+    .dropdown-menu {
+      border-top: 2px solid #c4c4c4;
+    }
   }
 }
 
@@ -72,10 +59,10 @@
   z-index: 990;
   left: 50%;
   margin-left: -50vw;
-  border-top: 2px solid;
-  margin-top: 35px;
+  margin-top: 33px;
   visibility: hidden;
   opacity: 0;
+  transition: transform 0.35s ease;
   .dropdown-menu-inner {
     max-width: 1360px;
     margin: auto;
@@ -89,17 +76,17 @@
       left: 73%;
       top: 50%;
       transform: translate(0%, -22%);
-        h3 {
-          font-size: 25px;
-          font-family: "Galaxie Copernicus";
-          font-weight: 300;
-          color: $color_primary;
-        }
-        .space-line {
-          width: 40%;
-          height: 1px;
-          background: #C4C4C4;
-          margin: 30px 0;
+      h3 {
+        font-size: 25px;
+        font-family: 'Galaxie Copernicus';
+        font-weight: 300;
+        color: $color_primary;
+      }
+      .space-line {
+        width: 40%;
+        height: 1px;
+        background: #c4c4c4;
+        margin: 30px 0;
       }
     }
   }

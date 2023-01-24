@@ -13,7 +13,7 @@
 }
 
 #{$prefix}-btn {
-  color: #3c3c3c;
+  color: $color_secondary;
   text-decoration: none;
   transition: all 0.3s;
   display: flex;
@@ -23,7 +23,7 @@
   font-size: 18px;
   font-style: normal;
   line-height: 1.33;
-  font-weight: bold;
+  font-weight: 500;
   border-radius: 2px;
 
   &#{$prefix}-btn-primary {
@@ -42,7 +42,7 @@
 
   &#{$prefix}-btn-transparent {
     background: transparent;
-    border: 1px solid $color_secondary;
+    border: 1px solid #c4c4c4;
     &:hover {
       background: $color_primary;
     }
@@ -53,7 +53,7 @@
   }
   span {
     padding: 12px 15px;
-    border-right: 1px solid;
+    border-right: 1px solid #c4c4c4;
   }
   i {
     padding: 12px;

@@ -44,27 +44,32 @@
     $('.outside-menu-toggler .menu-toggler').click(function () {
       $('body').toggleClass('main-menu-open');
     });
-
-    $('#primary-menu .menu-item').click(function () {
-      $('.menu-item.menu-active').removeClass('menu-active');
-      $(this).addClass('menu-active');
-    });
-
-    $('#mr-mobile-menu-primary-menu li').click(function () {
-      $('li.active').removeClass('active');
-      $(this).addClass('active');
-    });
-
     $('#mr-close').click(function () {
       $('body').removeClass('main-menu-open');
     });
 
+    $('#primary-menu .menu-item').click(function () {
+      $('.menu-overlay').remove();
+      if ($(this).hasClass('menu-active')) {
+        $('.menu-item.menu-active').removeClass('menu-active');
+        $('.menu-overlay').remove();
+      } else {
+        $('.menu-item.menu-active').removeClass('menu-active');
+        $(this).addClass('menu-active');
+        $('#page').prepend('<div class="menu-overlay"></div>');
+      }
+    });
+
+    $('#mr-mobile-menu-primary-menu li').click(function (e) {
+      e.preventDefault();
+      $('li.active').removeClass('active');
+      $(this).addClass('active');
+    });
   }
 
   $(window).on('scroll', function () {
     if ($(window).scrollTop() > 50) {
       $('body').addClass('body-scrolled');
-      // adding masthead id  header tag
     } else {
       $('body').removeClass('body-scrolled');
     }

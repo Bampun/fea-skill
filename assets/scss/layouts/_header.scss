@@ -5,6 +5,9 @@
   height: 500px;
   background: #fff;
   z-index: 1;
+  @include media(sm) {
+    width: 98%;
+  }
   @include media(mb) {
     left: 20px;
     height: 440px;

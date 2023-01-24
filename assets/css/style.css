@@ -47,11 +47,6 @@
   color: #000;
 }
 
-.outside-container-small {
-  max-width: 1050px;
-  margin: auto;
-}
-
 .has-overlay:after {
   content: "";
   background: #000;
@@ -69,7 +64,7 @@ html {
   padding: 0;
   font-size: 16px;
   font-family: "Inter";
-  background: #F2EFEE;
+  background: #f2efee;
 }
 
 *,
@@ -123,34 +118,34 @@ h3 {
   font-size: 18px;
   font-style: normal;
   line-height: 1.33;
-  font-weight: bold;
+  font-weight: 500;
   border-radius: 2px;
 }
 .outside-btn.outside-btn-primary {
-  background: #003A92;
+  background: #003a92;
 }
 .outside-btn.outside-btn-primary:hover {
-  background: #003A92;
+  background: #003a92;
 }
 .outside-btn.outside-btn-secondary {
-  background: #3C3C3C;
+  background: #3c3c3c;
 }
 .outside-btn.outside-btn-secondary:hover {
-  background: #003A92;
+  background: #003a92;
 }
 .outside-btn.outside-btn-transparent {
   background: transparent;
-  border: 1px solid #3C3C3C;
+  border: 1px solid #c4c4c4;
 }
 .outside-btn.outside-btn-transparent:hover {
-  background: #003A92;
+  background: #003a92;
 }
 .outside-btn:hover {
   color: #fff;
 }
 .outside-btn span {
   padding: 12px 15px;
-  border-right: 1px solid;
+  border-right: 1px solid #c4c4c4;
 }
 .outside-btn i {
   padding: 12px;
@@ -158,7 +153,7 @@ h3 {
 
 .outside-top-bar {
   padding: 18px 0;
-  background: #F2EFEE;
+  background: #f2efee;
   width: 100%;
   position: relative;
 }
@@ -178,7 +173,7 @@ h3 {
   color: #74788A;
 }
 .outside-top-bar .outside-social-menu ul a:hover {
-  color: #003A92;
+  color: #003a92;
 }
 .outside-top-bar .outside-social-menu ul a i.fa-brands {
   font-family: "Font Awesome 5 Brands";
@@ -208,7 +203,7 @@ h3 {
   position: absolute;
   height: 2px;
   width: 100%;
-  background: #3C3C3C;
+  background: #3c3c3c;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
@@ -239,7 +234,7 @@ h3 {
 }
 
 .body-scrolled .outside-menu-toggler a span {
-  background: #003A92;
+  background: #003a92;
 }
 
 .bg-overlay {
@@ -249,6 +244,11 @@ h3 {
   height: 500px;
   background: #fff;
   z-index: 1;
+}
+@media (max-width: 1024px) {
+  .bg-overlay {
+    width: 98%;
+  }
 }
 @media (max-width: 768px) {
   .bg-overlay {
@@ -285,7 +285,7 @@ h3 {
   font-weight: 700;
 }
 .outside-site-title > a {
-  color: #003A92;
+  color: #003a92;
 }
 
 .outside-site-description {
@@ -293,7 +293,7 @@ h3 {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
-  color: #003A92;
+  color: #003a92;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -304,7 +304,7 @@ h3 {
   position: absolute;
   width: 20px;
   height: 2px;
-  background: #003A92;
+  background: #003a92;
   left: 0;
 }
 .outside-site-description::after {
@@ -312,7 +312,7 @@ h3 {
   position: absolute;
   width: 20px;
   height: 2px;
-  background: #003A92;
+  background: #003a92;
   right: 0;
 }
 
@@ -355,7 +355,7 @@ h3 {
 
 .outside-site-footer {
   position: relative;
-  background: #3C3C3C;
+  background: #3c3c3c;
 }
 .outside-site-footer .outside-main-footer {
   padding: 60px 0;
@@ -616,6 +616,17 @@ h3 {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
+.body-scrolled .menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  background: #74788a;
+  opacity: 0.8;
+}
+
 .outside-primary-menu ul {
   display: flex;
   align-items: center;
@@ -623,17 +634,17 @@ h3 {
   list-style: none;
 }
 .outside-primary-menu ul .menu-active > a {
-  color: #003A92;
+  color: #003a92;
 }
 .outside-primary-menu ul a {
-  color: #3C3C3C;
+  color: #3c3c3c;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   position: relative;
 }
 .outside-primary-menu ul a:hover {
-  color: #003A92;
+  color: #003a92;
 }
 @media (max-width: 768px) {
   .outside-primary-menu {
@@ -646,6 +657,10 @@ h3 {
   opacity: 1;
 }
 
+.body-scrolled .menu-active .dropdown-menu {
+  border-top: 2px solid #c4c4c4;
+}
+
 .dropdown-menu {
   position: fixed;
   background-color: #fff;
@@ -654,10 +669,10 @@ h3 {
   z-index: 990;
   left: 50%;
   margin-left: -50vw;
-  border-top: 2px solid;
-  margin-top: 35px;
+  margin-top: 33px;
   visibility: hidden;
   opacity: 0;
+  transition: transform 0.35s ease;
 }
 .dropdown-menu .dropdown-menu-inner {
   max-width: 1360px;
@@ -678,12 +693,12 @@ h3 {
   font-size: 25px;
   font-family: "Galaxie Copernicus";
   font-weight: 300;
-  color: #003A92;
+  color: #003a92;
 }
 .dropdown-menu .dropdown-menu-inner .sub-menu .space-line {
   width: 40%;
   height: 1px;
-  background: #C4C4C4;
+  background: #c4c4c4;
   margin: 30px 0;
 }
 
@@ -691,13 +706,18 @@ h3 {
   padding-top: 25px;
 }
 .outside-banner-wrapper .outside-banner-main {
-  z-index: 99;
+  z-index: 50;
   position: relative;
   min-height: 700px;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1024px) {
   .outside-banner-wrapper .outside-banner-main {
-    min-height: 420px;
+    min-height: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .outside-banner-wrapper .outside-banner-main {
+    min-height: 400px;
   }
 }
 .outside-banner-wrapper .outside-banner-main .outside-banner-inner {
@@ -724,7 +744,12 @@ h3 {
   font-family: "Galaxie Copernicus";
   font-weight: 400;
   font-size: 60px;
-  color: #003A92;
+  color: #003a92;
+}
+@media (max-width: 1024px) {
+  .outside-banner-wrapper .outside-banner-main h2 {
+    font-size: 38px;
+  }
 }
 @media (max-width: 768px) {
   .outside-banner-wrapper .outside-banner-main h2 {
@@ -738,6 +763,28 @@ h3 {
   max-width: 94%;
   height: 450px;
   margin-top: 50px;
+}
+@media (min-width: 1500px) {
+  .outside-banner-wrapper .outside-banner-main .outside-banner-image {
+    max-width: 89%;
+  }
+}
+@media (min-width: 1800px) {
+  .outside-banner-wrapper .outside-banner-main .outside-banner-image {
+    max-width: 85%;
+  }
+}
+@media (max-width: 1024px) {
+  .outside-banner-wrapper .outside-banner-main .outside-banner-image {
+    max-width: 97%;
+    height: 380px;
+  }
+}
+@media (max-width: 768px) {
+  .outside-banner-wrapper .outside-banner-main .outside-banner-image {
+    max-width: 93%;
+    height: 400px;
+  }
 }
 .outside-banner-wrapper .outside-banner-main .outside-banner-image img {
   width: 100%;
@@ -804,12 +851,12 @@ h3 {
   left: 4%;
   width: 100%;
 }
-.outside-the-founders .outside-the-founders-image .outside-the-founders-author h3,
-.outside-the-founders .outside-the-founders-image .outside-the-founders-author h4 {
+.outside-the-founders .outside-the-founders-image .outside-the-founders-author h3 {
   font-size: 38px;
   font-weight: 400;
   line-height: 1.2;
   color: #fff;
+  font-family: "Galaxie Copernicus";
 }
 
 .outside-line-space {
@@ -819,6 +866,49 @@ h3 {
   background: #fff;
   opacity: 0.2;
   margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .founders-is-desktop {
+    display: none;
+  }
+}
+
+.founders-is-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .founders-is-mobile {
+    display: block;
+  }
+}
+.founders-is-mobile .outside-the-founders-image:nth-child(1) {
+  margin-bottom: 15px;
+}
+.founders-is-mobile .outside-line-space {
+  display: none;
+}
+.founders-is-mobile h3 {
+  font-size: 18px !important;
+  font-weight: 300 !important;
+}
+.founders-is-mobile h3 i {
+  font-size: 13px;
+  margin-left: 6px;
+}
+
+.founders-one .author-two {
+  display: none;
+}
+
+.founders-two {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.36) 100%), url("/assets/images/founders-two.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+.founders-two .author-one {
+  display: none;
 }
 
 .outside-our-mission-overlay {
@@ -905,7 +995,7 @@ h3 {
 .outside-beneficiaries-wrapper h5 {
   font-size: 20px;
   font-weight: 700;
-  color: #003A92;
+  color: #003a92;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
@@ -925,7 +1015,7 @@ h3 {
   line-height: 1.6;
 }
 .outside-beneficiaries-wrapper .outside-beneficiaries-footer {
-  background: #003A92;
+  background: #003a92;
   color: #fff;
   justify-content: space-between;
   padding: 5px 50px 10px 20px;
@@ -955,7 +1045,7 @@ h3 {
 .outside-gallery-title {
   font-size: 20px;
   font-weight: 700;
-  color: #003A92;
+  color: #003a92;
   margin-bottom: 50px;
   text-transform: uppercase;
 }
@@ -969,7 +1059,7 @@ h3 {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
-  color: #3C3C3C;
+  color: #3c3c3c;
   padding-top: 10px;
 }
 
@@ -1026,7 +1116,7 @@ h3 {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.002em;
-  color: #3C3C3C;
+  color: #3c3c3c;
   border-bottom: 1px solid;
   border-color: #c4c4c4;
   padding-bottom: 10px;
@@ -1038,7 +1128,7 @@ h3 {
 .outside-latest-news-title {
   font-size: 20px;
   font-weight: 700;
-  color: #003A92;
+  color: #003a92;
   margin-bottom: 50px;
   text-transform: uppercase;
 }
@@ -1052,7 +1142,7 @@ h3 {
   line-height: 1.2;
 }
 .outside-post .post-title a {
-  color: #3C3C3C;
+  color: #3c3c3c;
 }
 
 .post-left .outside-post {
@@ -1086,7 +1176,7 @@ h3 {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #74788A;
+  color: #74788a;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1102,7 +1192,7 @@ h3 {
   position: absolute;
   height: 2px;
   width: 30px;
-  background: #74788A;
+  background: #74788a;
   left: 103px;
 }
 
@@ -1158,10 +1248,9 @@ hr {
   padding: 0 15px;
   margin: auto;
 }
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .outside-container {
-    max-width: 1140px;
-    padding: 0 60px;
+    padding: 0 30px;
   }
 }
 @media (max-width: 768px) {
