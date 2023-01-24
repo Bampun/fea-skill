@@ -505,6 +505,7 @@ h3 {
   visibility: visible;
   opacity: 1;
   padding: 30px;
+  transition: transform 0.35s ease;
 }
 .main-menu-open .mr-mobile-menu-wrapper .mr-mobile-header {
   display: flex;
@@ -604,6 +605,7 @@ h3 {
   width: 2px;
   height: 100%;
   transform: translate(-50%, -50%) rotate(130deg);
+  transition: transform 0.35s ease;
 }
 .mr-close-wrapper .mr-inner-box .mr-inner::after {
   content: "";
@@ -614,6 +616,7 @@ h3 {
   width: 2px;
   height: 100%;
   transform: translate(-50%, -50%) rotate(45deg);
+  transition: transform 0.35s ease;
 }
 
 .body-scrolled .menu-overlay {
